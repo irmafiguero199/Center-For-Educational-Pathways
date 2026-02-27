@@ -3,219 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Center For Educational Pathways | Building Future Leaders</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Center For Educational Pathways | Shaping the Future of Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --edu-blue: #1a5f7a;
-            --edu-orange: #f39c12;
-            --edu-green: #27ae60;
-            --bg-light: #fdfdfd;
-            --text-dark: #2c3e50;
+            --edu-blue: #1A365D; /* أزرق تعليمي عميق */
+            --sky-blue: #3182CE;
+            --soft-gray: #F7FAFC;
+            --text-main: #2D3748;
+            --accent-gold: #ECC94B;
+            --white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Source Sans Pro', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.8; }
-        h1, h2, h3 { font-family: 'Merriweather', serif; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--white); color: var(--text-main); line-height: 1.7; scroll-behavior: smooth; }
 
-        /* Navigation */
+        /* Modern Navigation */
         nav {
-            background: white;
-            padding: 20px 5%;
+            background: var(--white);
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
-        .logo { color: var(--edu-blue); font-size: 1.5rem; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .nav-links a { text-decoration: none; color: var(--text-dark); margin-left: 25px; font-weight: 600; transition: 0.3s; }
-        .nav-links a:hover { color: var(--edu-orange); }
+        .logo { font-weight: 700; font-size: 1.3rem; color: var(--edu-blue); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .logo::before { content: '◈'; color: var(--sky-blue); font-size: 1.8rem; }
+        .nav-links a { text-decoration: none; color: var(--text-main); margin-left: 30px; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--sky-blue); }
 
-        /* Hero Header */
+        /* Hero Section */
         header {
             height: 90vh;
-            background: linear-gradient(rgba(26, 95, 122, 0.8), rgba(26, 95, 122, 0.8)), 
-                        url('https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.9), rgba(49, 130, 206, 0.8)), 
+                        url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: var(--white);
             text-align: center;
-            padding: 0 5%;
+            padding: 0 10%;
         }
-        header h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 25px; }
-        header p { font-size: 1.3rem; max-width: 850px; margin-bottom: 40px; opacity: 0.9; }
+        header h1 { font-family: 'Lora', serif; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 25px; line-height: 1.2; }
+        header p { font-size: 1.3rem; max-width: 850px; opacity: 0.9; font-weight: 300; }
+        .btn-cta { margin-top: 35px; padding: 15px 40px; background: var(--accent-gold); color: var(--edu-blue); text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s; }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        .btn { padding: 18px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
-        .btn-orange { background: var(--edu-orange); color: white; box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4); }
-        .btn-orange:hover { transform: translateY(-3px); background: #e67e22; }
+        .ein-banner { background: var(--edu-blue); color: var(--white); padding: 18px 0; text-align: center; font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; }
 
-        /* Stats Section */
-        .stats { background: white; padding: 60px 5%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center; border-bottom: 1px solid #eee; }
-        .stat-item h3 { font-size: 3rem; color: var(--edu-blue); margin-bottom: 5px; }
-        .stat-item p { color: #7f8c8d; font-weight: 600; }
+        /* Sections */
+        section { padding: 120px 10%; max-width: 1400px; margin: auto; }
+        .section-tag { color: var(--sky-blue); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; display: block; text-align: center; margin-bottom: 10px; }
+        .section-title { font-family: 'Lora', serif; text-align: center; margin-bottom: 60px; font-size: 2.8rem; color: var(--edu-blue); }
 
-        /* Content Sections */
-        section { padding: 100px 5%; max-width: 1400px; margin: auto; }
-        .section-header { text-align: center; margin-bottom: 70px; }
-        .section-header h2 { font-size: 2.8rem; color: var(--edu-blue); margin-bottom: 20px; }
-        
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        /* Mission Detailed */
+        .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .mission-text h2 { font-family: 'Lora', serif; font-size: 2.2rem; margin-bottom: 25px; }
+        .mission-text p { margin-bottom: 20px; font-size: 1.1rem; color: #4A5568; }
 
-        .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f1f1; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--edu-orange); }
-        .card img { width: 100%; border-radius: 8px; margin-bottom: 20px; height: 200px; object-fit: cover; }
+        /* Gallery - 6 Academic Images */
+        .gallery-edu { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .gallery-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.4s; }
+        .gallery-card:hover { transform: translateY(-10px); }
+        .gallery-card img { width: 100%; height: 250px; object-fit: cover; }
+        .card-info { padding: 25px; }
+        .card-info h3 { font-size: 1.1rem; color: var(--edu-blue); margin-bottom: 10px; }
+        .card-info p { font-size: 0.9rem; color: #718096; }
 
-        /* Footer */
-        footer { background: #1a252f; color: #bdc3c7; padding: 80px 5% 40px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; margin-bottom: 50px; }
-        .footer-col h4 { color: white; margin-bottom: 25px; text-transform: uppercase; }
-        .footer-col li { list-style: none; margin-bottom: 12px; }
+        /* Official Data Block */
+        .compliance-box { background: var(--soft-gray); border-radius: 20px; padding: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; border: 1px solid #E2E8F0; }
+        .info-item h4 { color: var(--sky-blue); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px; }
+        .info-item p { font-weight: 700; font-size: 1.1rem; color: var(--edu-blue); }
 
-        @media (max-width: 900px) {
-            .grid-2, .stats { grid-template-columns: 1fr; }
-            header h1 { font-size: 2.8rem; }
-        }
+        footer { background: #1A202C; color: var(--white); padding: 100px 10% 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 80px; }
+        .footer-bottom { text-align: center; padding-top: 50px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 60px; font-size: 0.8rem; opacity: 0.4; }
+
+        @media (max-width: 992px) { .mission-grid, .footer-grid { grid-template-columns: 1fr; } .mission-grid { gap: 40px; } }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#" class="logo">🎓 CENTER FOR EDUCATIONAL PATHWAYS</a>
+        <a href="#" class="logo">CENTER FOR EDUCATIONAL PATHWAYS</a>
         <div class="nav-links">
-            <a href="#about">About</a>
+            <a href="#about">About Us</a>
             <a href="#programs">Programs</a>
-            <a href="#impact">Impact</a>
-            <a href="#legal">Transparency</a>
+            <a href="#compliance">Compliance</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header>
-        <h1>Education is the Key to Every Door</h1>
-        <p>A non-profit organization based in the Bronx, dedicated to providing students with the pathways, mentorship, and resources they need to succeed in a changing world.</p>
-        <a href="#contact" class="btn btn-orange">Empower a Student Today</a>
+        <h1>Advancing Excellence Through Knowledge</h1>
+        <p>Providing research-based educational solutions and professional pathways for the next generation of leaders in New York.</p>
+        <a href="#contact" class="btn-cta">Learn More About Our Impact</a>
     </header>
 
-    <div class="stats">
-        <div class="stat-item"><h3>1000+</h3><p>Students Mentored</p></div>
-        <div class="stat-item"><h3>50+</h3><p>Pathway Courses</p></div>
-        <div class="stat-item"><h3>100%</h3><p>Success Rate</p></div>
-        <div class="stat-item"><h3>NY-BX</h3><p>Local Impact</p></div>
+    <div class="ein-banner">
+        FEDERAL TAX ID (EIN): 83-0345654 • 501(C)(3) EDUCATIONAL ORGANIZATION
     </div>
 
     <section id="about">
-        <div class="grid-2">
-            <div>
-                <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" alt="Collaborative Learning">
+        <span class="section-tag">Institutional Mission</span>
+        <div class="mission-grid">
+            <div class="mission-text">
+                <h2>Empowering Communities Through Innovative Education</h2>
+                <p>The Center for Educational Pathways is a registered non-profit organization located in the Bronx, New York. Our primary mission is to provide accessible, high-quality educational resources and specialized training programs designed to bridge the gap between academic theory and professional practice.</p>
+                <p>We focus on creating tailored pathways for students and professionals, ensuring that they have the critical thinking skills and technical expertise required in today's evolving global economy. Our commitment to educational equity drives everything we do.</p>
             </div>
-            <div>
-                <h2 style="color: var(--edu-blue); margin-bottom: 25px;">Our Journey in the Bronx</h2>
-                <p style="margin-bottom: 20px;">The Center For Educational Pathways (CEP) was established with a singular vision: to ensure that zip code does not determine destiny. Based in the heart of the Bronx, we provide a structured environment where students can explore their academic and professional interests.</p>
-                <p style="margin-bottom: 20px;">Our foundation specializes in creating customized "pathways" for youth, ranging from STEM and coding to creative arts and leadership. We believe that by providing the right tools at the right time, we can transform the trajectory of an entire generation.</p>
-                <p>As a registered non-profit (EIN 83-0345654), we operate with complete transparency and a deep-rooted commitment to our community.</p>
-            </div>
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" style="width: 100%; border-radius: 20px; box-shadow: 20px 20px 60px rgba(0,0,0,0.05);" alt="Educational Training">
         </div>
     </section>
 
-    <section id="mission" style="background: white; max-width: 100%;">
-        <div style="max-width: 1400px; margin: auto; padding: 0 5%;">
-            <div class="section-header">
-                <h2>Our Mission & Core Values</h2>
-                <p>We don't just teach; we inspire a lifelong passion for discovery and growth.</p>
-            </div>
-            <div class="grid-3">
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Inclusive Education">
-                    <h3>Inclusive Excellence</h3>
-                    <p>We provide high-quality learning resources to students of all backgrounds, ensuring that every voice is heard and every potential is realized.</p>
+    <section id="programs" style="background-color: #fcfcfc; max-width: 100%;">
+        <div style="max-width: 1400px; margin: auto; padding: 0 10%;">
+            <span class="section-tag">Our Programs</span>
+            <h2 class="section-title">Areas of Professional Focus</h2>
+            <div class="gallery-edu">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80" alt="Workshops">
+                    <div class="card-info">
+                        <h3>Interactive Workshops</h3>
+                        <p>Specialized seminars focusing on advanced technical skills and leadership development.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mentorship">
-                    <h3>Mentorship First</h3>
-                    <p>Education is a journey best taken with a guide. Our mentorship network connects students with Bronx-based professionals who provide real-world insights.</p>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1454165833467-1359a3a28d67?auto=format&fit=crop&w=500&q=80" alt="Research">
+                    <div class="card-info">
+                        <h3>Educational Research</h3>
+                        <p>Data-driven analysis of modern pedagogical methods to improve learning outcomes.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Community Growth">
-                    <h3>Community Impact</h3>
-                    <p>Our success is measured by the growth of our community. We partner with local schools and businesses to create a supportive ecosystem for our students.</p>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1513258496099-48168024adb0?auto=format&fit=crop&w=500&q=80" alt="Mentorship">
+                    <div class="card-info">
+                        <h3>Mentorship Programs</h3>
+                        <p>Connecting emerging talents with industry experts for career guidance.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="legal">
-        <div class="section-header"><h2>Transparency & Compliance</h2></div>
-        <div class="grid-2">
-            <div class="card" style="border-left: 10px solid var(--edu-green);">
-                <h3>Privacy Policy</h3>
-                <p>The Center For Educational Pathways (CEP) is committed to protecting student and donor privacy. We adhere to all state and federal data protection regulations. We never share or sell personal information to third parties, ensuring a safe digital environment for our mission.</p>
-            </div>
-            <div class="card" style="border-left: 10px solid var(--edu-blue);">
-                <h3>Legal Status</h3>
-                <p>CEP is a registered 501(c)(3) non-profit organization. Our EIN 83-0345654 is registered in the state of New York. All contributions are tax-deductible to the full extent of the law. We maintain open financial records to ensure accountability.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" style="background: #f1f5f9; max-width: 100%;">
-        <div style="max-width: 1400px; margin: auto; padding: 0 5%;">
-            <div class="grid-2">
-                <div>
-                    <h2 style="color: var(--edu-blue); font-size: 2.5rem; margin-bottom: 30px;">Get in Touch</h2>
-                    <p style="margin-bottom: 20px;"><strong>📍 Address:</strong> 1823 Colden Ave, Bronx, NY 10462-3112, USA</p>
-                    <p style="margin-bottom: 20px;"><strong>📧 Email:</strong> Micheal.Bitz@center-for-educational-pathways.sbs</p>
-                    <p style="margin-bottom: 20px;"><strong>🆔 Tax ID:</strong> EIN 83-0345654</p>
-                    <p><strong>📞 Support:</strong> Monday - Friday, 9:00 AM - 5:00 PM (EST)</p>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=500&q=80" alt="Tech Hub">
+                    <div class="card-info">
+                        <h3>Technical Training</h3>
+                        <p>Providing hands-on experience in high-demand STEM and digital fields.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Community Inquiry</h3>
-                    <p style="color: #666; margin-bottom: 20px;">Are you a student looking for a pathway or a professional wanting to mentor? Reach out to our Bronx office today.</p>
-                    <div style="background: var(--edu-blue); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold;">
-                        Status: Accepting New Students
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=500&q=80" alt="Online Learning">
+                    <div class="card-info">
+                        <h3>Digital Literacy</h3>
+                        <p>Expanding access to virtual education resources for underserved communities.</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Certification">
+                    <div class="card-info">
+                        <h3>Certification Pathways</h3>
+                        <p>Preparing individuals for professional licensing and recognized certifications.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Center For Educational Pathways</h4>
-                <p>Empowering the next generation of Bronx leaders through customized educational journeys and professional mentorship.</p>
+    <section id="compliance">
+        <span class="section-tag">Transparency & Registry</span>
+        <h2 class="section-title">Official Organization Details</h2>
+        <div class="compliance-box">
+            <div class="info-item">
+                <h4>Registered Entity Name</h4>
+                <p>Center For Educational Pathways</p>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <li><a href="#about" style="color:inherit; text-decoration:none;">About Us</a></li>
-                <li><a href="#programs" style="color:inherit; text-decoration:none;">Programs</a></li>
-                <li><a href="#legal" style="color:inherit; text-decoration:none;">Legal Info</a></li>
+            <div class="info-item">
+                <h4>Federal Tax ID (EIN)</h4>
+                <p>83-0345654</p>
             </div>
-            <div class="footer-col">
-                <h4>Compliance</h4>
-                <li>EIN: 83-0345654</li>
-                <li>501(c)(3) Registered</li>
-                <li>Bronx, New York</li>
+            <div class="info-item">
+                <h4>Organization Status</h4>
+                <p>Non-Profit 501(c)(3)</p>
             </div>
-            <div class="footer-col">
-                <h4>Newsletter</h4>
-                <p>Stay updated on our student success stories.</p>
-                <input type="email" placeholder="Email" style="width: 100%; padding: 10px; margin-top: 10px; border-radius: 4px; border: none;">
+            <div class="info-item">
+                <h4>Physical HQ</h4>
+                <p>1823 Colden Ave, Bronx, NY 10462-3112</p>
             </div>
         </div>
-        <p style="text-align: center; border-top: 1px solid #34495e; padding-top: 30px; font-size: 0.8rem;">
-            © 2026 Center For Educational Pathways. All Rights Reserved. Official Website.
-        </p>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div>
+                <h3 style="font-family: 'Lora', serif; font-size: 1.5rem; margin-bottom: 20px;">Center For Educational Pathways</h3>
+                <p style="font-size: 0.9rem; opacity: 0.7;">An official New York-based non-profit organization dedicated to fostering academic excellence and professional growth for all communities.</p>
+            </div>
+            <div>
+                <h4>Official Links</h4>
+                <p style="margin-top: 15px;"><a href="#" style="color: white; text-decoration: none; font-size: 0.85rem;">Organization Bylaws</a></p>
+                <p><a href="#" style="color: white; text-decoration: none; font-size: 0.85rem;">Annual Impact Review</a></p>
+                <p><a href="#" style="color: white; text-decoration: none; font-size: 0.85rem;">Privacy & Ethics</a></p>
+            </div>
+            <div>
+                <h4>Contact Support</h4>
+                <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">1823 Colden Ave, Bronx, NY 10462</p>
+                <p style="font-size: 0.85rem; opacity: 0.7;">EIN: 83-0345654</p>
+                <p style="font-size: 0.85rem; opacity: 0.7;">Email: Micheal.Bitz@center-for-educational-pathways.sbs</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Center For Educational Pathways. All Rights Reserved. This is an official public information resource.
+        </div>
     </footer>
 
 </body>
-
 </html>
